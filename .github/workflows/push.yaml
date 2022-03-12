@@ -18,3 +18,4 @@ jobs:
           architecture: x64
       - name: Run spring javaformat validation
         run: mvn spring-javaformat:validate
+        working-directory: ./api
