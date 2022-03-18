@@ -4,3 +4,4 @@
 *.iml
 *.ipr
 docker-compose-dev.local.yml
+.m2
