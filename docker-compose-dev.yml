@@ -1,4 +1,19 @@
 services:
+  api:
+    container_name: spring-react-template-api-dev
+    build:
+      context: ./api
+      dockerfile: Dockerfile-dev
+    volumes:
+      - ./:/app
+      - ./.m2:/root/.m2
+    working_dir: /app
+    command: sh run.sh
+    ports:
+      - 8080:8080
+      - 35729:35729
+      - 5005:5005
+
   client:
     container_name: spring-react-template-client-dev
     image: spring-react-template-client-dev
