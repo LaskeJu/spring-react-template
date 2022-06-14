@@ -35,3 +35,11 @@ jobs:
       - name: Run tests
         run: mvn test
         working-directory: ./api
+
+  codecov:
+    name: Code Coverage
+    runs-on: ubuntu-18.04
+
+    steps:
+      - uses: actions/checkout@master
+      - uses: codecov/codecov-action@v2
